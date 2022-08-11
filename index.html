@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selamat datang een</title>
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <!-- icon page -->
     <link rel="shortcut icon" href="images/home-pic.jpg">
 
@@ -22,6 +24,8 @@
 
 <header>
 
+    <a href="#" class="logo">EEN FAUZI</a>
+    
     <div id="menu-bars" class="fas fa-bars"></div>
 
     <nav class="navbar">
@@ -41,12 +45,14 @@
 
 <section class="home" id="home">
 
+   
+
     <div id="particles-js"></div>
 
     <div class="content">
         <img class="tilt" src="images/home-pic.jpg" alt="">
         <h3> IRAWAN <span>Een</span> </h3>
-        <p> i am a <span class="typing-text"> front end developer </span> </p>
+        <p> Profesi Saya Sebagai <span class="typing-text"> front end developer </span> </p>
         <a href="#about" class="btn">about me</a>
     </div>
 
@@ -94,48 +100,16 @@
 
 <!-- services section starts  -->
 
-<section class="services" id="services">
+<section class="home" id="home">
 
-    <h1 class="heading"> <span> my </span> services </h1>
-
-    <div class="box-container">
-
-        <div class="box tilt">
-            <i class="fas fa-code"></i>
-            <h3>web development</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quidem.</p>
+    <div class="swiper-container image-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/shot-01.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/shot-02.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/shot-03.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/shot-04.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/shot-05.jpg" alt=""></div>
         </div>
-
-        <div class="box tilt">
-            <i class="fas fa-paint-brush"></i>
-            <h3>graphic design</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quidem.</p>
-        </div>
-
-        <div class="box tilt">
-            <i class="fas fa-bullhorn"></i>
-            <h3>seo marketing</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quidem.</p>
-        </div>
-
-        <div class="box tilt">
-            <i class="fas fa-envelope"></i>
-            <h3>email marketing</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quidem.</p>
-        </div>
-
-        <div class="box tilt">
-            <i class="fas fa-mobile"></i>
-            <h3>Responsive designs</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quidem.</p>
-        </div>
-
-        <div class="box tilt">
-            <i class="fab fa-wordpress"></i>
-            <h3>wordpress</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quidem.</p>
-        </div>
-
     </div>
 
 </section>
@@ -295,7 +269,27 @@
 <!-- vanilla-tilt.js link  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
 
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
+
+var swiper = new Swiper(".image-slider", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 2,
+        slideShadows: true,
+    },
+    loop:true,
+    autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+    },
+});
 
 let menu = document.querySelector('#menu-bars');
 let header = document.querySelector('header');
