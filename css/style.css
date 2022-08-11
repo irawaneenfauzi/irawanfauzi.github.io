@@ -93,7 +93,7 @@ header .logo{
 header .navbar a{
     padding:1.5rem;
     font-size: 2rem;
-    color:#fff;
+    color:rgb(0, 0, 0);
 }
 
 header .navbar a:hover{
@@ -242,7 +242,7 @@ header .navbar a:hover{
   
   .home .content h3{
     font-size: 6.5rem;
-    color:rgb(252, 235, 2);
+    color:#222;
   }
   
   .home .content p{
